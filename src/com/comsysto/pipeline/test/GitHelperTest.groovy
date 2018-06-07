@@ -18,6 +18,6 @@ class GitHelperTest extends GroovyTestCase {
         // You can print the shell calls:
         // printf jenkinsMock.recordecShCalls[1]
 
-        assert jenkinsMock.recordecShCalls[0] == 'git clone https://HANS:DAMPF@github.com/comsysto/poc-java-i18n-pluralization.git source'
+        assert jenkinsMock.recordecShCalls[0] == 'git clone https://MYTOKEN@github.com/comsysto/poc-java-i18n-pluralization.git source'
     }
 }

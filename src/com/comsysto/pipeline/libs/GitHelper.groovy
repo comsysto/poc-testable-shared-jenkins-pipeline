@@ -8,6 +8,9 @@ class GitHelper {
         this.jenkins = _jenkins
     }
 
+    /*
+    * UsernamePasswordMultiBinding should contain a personal access token as password!
+    */
     def cloneGitHubRepository(String credentialsId, String owner, String repository) {
         jenkins.withCredentials([[$class: 'UsernamePasswordMultiBinding',
             credentialsId   : credentialsId,
@@ -15,8 +18,6 @@ class GitHelper {
             passwordVariable: 'githubPassword']]) {
 
             jenkins.sh 'git clone https://' +
-                    jenkins.env.githubUsername +
-                    ':' +
                     jenkins.env.githubPassword +
                     '@github.com/' +
                     owner +

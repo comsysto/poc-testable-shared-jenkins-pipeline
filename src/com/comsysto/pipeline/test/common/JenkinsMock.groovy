@@ -18,8 +18,8 @@ class JenkinsMock {
 
     def withCredentials(ArrayList credentials, Closure cl) {
         if (credentials[0]['credentialsId'] == 'github-credentials-1') {
-            this.env['githubUsername'] = 'HANS'
-            this.env['githubPassword'] = 'DAMPF'
+            this.env['githubUsername'] = 'unused'
+            this.env['githubPassword'] = 'MYTOKEN'
         }
         cl()
     }
