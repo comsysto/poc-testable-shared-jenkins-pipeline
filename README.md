@@ -37,4 +37,4 @@ We configured the library globally so that it is automatically available in ever
 
 ### License
 
-[MIT](./LICENSE) © [Bernhard Grünewaldt](https://github.com/clouless)
+[MIT](./LICENSE)
